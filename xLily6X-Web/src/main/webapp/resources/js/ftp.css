@@ -1,0 +1,52 @@
+.file {
+    position: relative;
+    /*display: inline-block;*/
+    background: #D0EEFF;
+    /*border: 1px solid #99D3F5;*/
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #1E88C7;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+}
+.file input {
+    position: absolute;
+    font-size: 50px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+
+.tr_color{
+    background-color: #effaff;height: 30px;
+}
+.tr_color_dubbo{
+    height: 30px;
+}
+.tr_orver{
+    background-color: #ff2e3b;
+}
+.icon
+{
+    background: url(../image/ui-icons_222222_256x240.png) no-repeat;
+    background-size:512px 480px;
+    width: 36px;
+    line-height: 36px;
+    display: inline-block;
+}
+
+.icon-open
+{
+    background-position: -30px -196px;
+}
+.icon-return{
+    background-position: -185px -99px;
+}

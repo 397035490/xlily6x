@@ -1,0 +1,154 @@
+<h1 id="帮助提示框"><a href="#" data-id="帮助提示框" class="anchor"><span>帮助提示框</span></a></h1>
+<blockquote id="widget_explain">
+    <p>控件说明</p>
+</blockquote>
+<p>使用该控件后，当鼠标移至 <code class="code">Target</code> 上时，弹出一个帮助提示框，用来对鼠标目标对象进行说明或描述</p>
+
+<blockquote id="widget_instance">
+    <p>调用实例</p>
+</blockquote>
+
+<p>调用实例</p>
+
+<blockquote class="blockquote">
+    <p>Html 代码</p>
+</blockquote>
+
+
+<blockquote id="widget_demo">
+    <p>效果演示</p>
+</blockquote>
+<blockquote class="blockquote">
+    <p>默认提示框</p>
+</blockquote>
+<p>请将鼠标移至button上</p>
+
+<input type="button"  class="xlily6x-button" id="button0" value="Tips Button" />
+
+
+
+<p>html 代码</p>
+<pre name="code" class="html"><xmp>
+    <input type="button" class="xlily6x-button" id="buttond0" value="Tips Button" />
+
+</xmp></pre>
+
+
+<p>js 代码</p>
+<pre name="code" class="js"><xmp>
+
+    // tips 参数
+    var options = {
+        font_size:"10px",
+        location:"UpRight",
+        text:"This is lily tips ! Thanks for you used xlily6x UI !"
+    }
+    // 控件名称 Tips ， 可通过内置控件名称对象获取 $.widget.Tips
+    $("#buttond0").xLily6X($.widget.Tips,options);
+
+</xmp></pre>
+
+
+<blockquote class="blockquote">
+    <p>不同位置弹出</p>
+</blockquote>
+
+<p>提示框显示位置</p>
+<p>右上 UpRight</p>
+<input type="button"  class="xlily6x-button" id="buttond1" value="default"/>
+<p>右下 LowerRight</p>
+<input type="button"  class="xlily6x-button"  id="buttond2" value="LowerRight" />
+<p>左上 UpLeft</p>
+<input type="button"  class="xlily6x-button"  id="buttond3" value="UpLeft" />
+<p>左下 LowerLeft</p>
+<input type="button"  class="xlily6x-button"  id="buttond4" value="LowerLeft" />
+
+<p>html 代码</p>
+<pre name="code" class="html"><xmp>
+
+    <input type="button"  class="xlily6x-button" id="button1" value="default"/>
+    <input type="button"  class="xlily6x-button" id="button2" value="LowerRight" />
+    <input type="button"  class="xlily6x-button" id="button3" value="UpLeft" />
+    <input type="button"  class="xlily6x-button" id="button4" value="LowerLeft" />
+
+</xmp></pre>
+
+<p>js 代码</p>
+<pre name="code" class="js"><xmp>
+
+    //默认位置 右上
+    $("#button1").xLily6X($.widget.Tips,{text:"default location"})
+    //右下
+    $("#button2").xLily6X($.widget.Tips,{text:"location LowerRight!",location:"LowerRight"})
+    //左上
+    $("#button3").xLily6X($.widget.Tips,{text:"location UpLeft !",location:"UpLeft"})
+    //左下
+    $("#button4").xLily6X($.widget.Tips,{text:"location LowerLeft ",location:"LowerLeft"})
+
+
+</xmp></pre>
+
+<blockquote id="widget_parameter" class="blockquote">
+    <p>options 参数说明</p>
+</blockquote>
+
+<table class="table table-bordered"  cellpadding="0" cellspacing="0" border="1"  >
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>类型</th>
+        <th>默认值</th>
+        <th width="500">描述</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>font_size</td>
+        <td>string</td>
+        <td>10px</td>
+        <td>
+            字体大小
+        </td>
+    </tr>
+    <tr>
+        <td>location</td>
+        <td>string</td>
+        <td>UpRight</td>
+        <td>
+            提示框出现的方位
+        </td>
+    </tr>
+    <tr>
+        <td>text</td>
+        <td>string</td>
+        <td></td>
+        <td>
+            提示框显示的文本内容
+        </td>
+    </tr>
+    </tbody>
+</table>
+<blockquote class="blockquote">
+    <p>注意事项</p>
+</blockquote>
+<p>提示框位置是以鼠标第一个触碰到目标上的点为基准来确定方向， 目标范围内移动鼠标不会改变提示框位置。 </p>
+
+<script>
+    // tips 参数
+    var options = {
+        font_size:"10px",
+        location:"UpRight",
+        text:"This is lily tips ! Thanks for you used xlily6x UI !"
+    }
+
+    $("#button0").xLily6X($.widget.Tips,options);
+    //默认位置 右上
+    $("#buttond1").xLily6X($.widget.Tips,{text:"default location"})
+    //右下
+    $("#buttond2").xLily6X($.widget.Tips,{text:"location LowerRight!",location:"LowerRight"})
+    //左上
+    $("#buttond3").xLily6X($.widget.Tips,{text:"location UpLeft !",location:"UpLeft"})
+    //左下
+    $("#buttond4").xLily6X($.widget.Tips,{text:"location LowerLeft ",location:"LowerLeft"})
+
+</script>

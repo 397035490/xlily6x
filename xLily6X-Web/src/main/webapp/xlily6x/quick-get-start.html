@@ -1,0 +1,58 @@
+<h1 id="快速入门"><a href="#" data-id="快速入门" class="anchor"><span>快速入门</span></a></h1>
+<blockquote>
+    <p>添加 X-Lily6x 支持</p>
+</blockquote>
+<p>X-Lily6x 扩展于 <code class="code">jQuery</code> ， 所以在引入<code class="code">js</code> 时，需要先引用 <code class="code">jQuery</code> 版本在1.8以上都可以</p>
+<p>引入 X-Lily6x <code class="code">js</code>文件</p>
+<pre name="code" class="html"><xmp>
+    <script src="../resources/js/jquery-2.1.1.js" ></script>
+    <script src="../resources/js/xlily6x-ui-1.0.0.js" ></script>
+            </xmp></pre>
+
+
+
+<p>引入<code class="code">css</code>样式</p>
+<pre name="code" class="html"><xmp>
+    <link rel="stylesheet" type="text/css" href="../resources/css/xlily6x-ui-1.0.1.css"/>
+            </xmp></pre>
+
+<blockquote>
+    <p>使用 X-Lily6x 控件</p>
+</blockquote>
+<p>X-Lily6x 的所有控件使用方式都一样，通过<code class="code">jQuery</code> 对象即可直接调用</p>
+<pre name="code" class="js"><xmp>
+    $("#const").xLily6X("widgetName",options);
+            </xmp></pre>
+<p></p>
+
+<blockquote class="blockquote"><p>xLily6X("widgetName",options) 参数说明</p></blockquote>
+<table class="table table-bordered"  cellpadding="0" cellspacing="0" border="1"  >
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>类型</th>
+        <th>默认值</th>
+        <th width="500">描述</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td>widgetName</td>
+        <td>string</td>
+        <td>""</td>
+        <td>
+            在 X-Lily6x 的世界中，所有的控件都有一个名字,这个参数表示需要加载的控件名 控件名可通过 <code class="code">$.widget</code> 对象获取
+        </td>
+    </tr>
+
+    <tr>
+        <td>options</td>
+        <td>object</td>
+        <td></td>
+        <td>
+            加载控件所需要的一些初始化配置信息,不同的控件有不同<code class="code">options</code>，具体控件<code class="code">options</code>请看对应控件参数说明
+        </td>
+    </tr>
+    </tbody>
+</table>

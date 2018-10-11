@@ -1,0 +1,257 @@
+<h1 id="右键菜单"><a href="#" data-id="右键菜单" class="anchor"><span>右键菜单</span></a></h1>
+<blockquote id="widget_explain">
+    <p>控件说明</p>
+</blockquote>
+<p>该控件用于需要使用邮件菜单进行操作管理的场景。使用该控件后，当鼠标移至 <code class="code">Target</code> 上时，右键单击，将出现一个关联菜单，用户可根据自己需求设置菜单中的菜单
+    项，以及单击后的处理事件。</p>
+
+<blockquote id="widget_instance">
+    <p>调用实例</p>
+</blockquote>
+
+<p>调用实例</p>
+
+<blockquote class="blockquote">
+    <p>Html 代码</p>
+</blockquote>
+
+<p>界面有<code class="code">div</code>元素，指定 <code class="code">id</code>值</p>
+<pre name="code" class="html"><xmp>
+    <div id="cmDemo1" style="width: 400px;height: 200px;background-color: #b4d5c1;border-radius: 12px;text-align: center;padding-top: 60px">
+        <h1>右键 Click Me ！  </h1>
+    </div>
+            </xmp></pre>
+<blockquote class="blockquote">
+    <p>通过jQuery对象即可调用菜单控件方法</p>
+</blockquote>
+
+<pre name="code" class="js">
+            <xmp>
+    // 初始化 右键环境菜单
+    $("#cmDemo1").xLily6X($.widget.ContextMenu,options);
+            </xmp>
+            </pre>
+
+<blockquote class="blockquote">
+    <p>options 对象示例</p>
+</blockquote>
+
+<pre name="code" class="js">
+            <xmp>
+    /**
+     * 环境菜单 选项
+     */
+    var options = {
+        // 菜单项
+        items:[
+            {id:"saveBtn",text:"save1",click:function (obj,env) {
+                    console.log(obj);
+                    alert("saveBtn is click");
+                }
+            },
+            {id:"save2Btn",text:"save2",click:
+                // 单机事件
+                function (obj,env) {alert("save2Btn is click");}},
+            {id:"save3Btn",text:"save3",click:function (obj,env) {alert("save3Btn is click");}}
+        ],
+        auto_height:true,
+        //背景颜色
+        background_color:"#fbf8ff"
+    }
+            </xmp>
+            </pre>
+
+<blockquote  id="widget_demo">
+    <p>效果演示</p>
+</blockquote>
+<p>鼠标移至下面层中，右键单击弹出菜单，离开菜单范围时，菜单框关闭</p>
+<div id="cmDemo" style="width: 400px;height: 200px;border-radius: 12px;text-align: center;padding-top: 60px" class="background-left-buttom">
+    <h1>Click Me ！  </h1>
+</div>
+
+<blockquote id="widget_parameter" class="blockquote">
+    <p>options 参数说明</p>
+</blockquote>
+<p>每一个对象都会有一个默认原型，当缺省时，会根据原型中的默认值进行默认加载</p>
+<table class="table table-bordered"  cellpadding="0" cellspacing="0" border="1"  >
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>类型</th>
+        <th>默认值</th>
+        <th width="500">描述</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr>
+        <td>items</td>
+        <td>object</td>
+        <td>""</td>
+        <td>
+            <code class="code">items</code> 参数用来指定菜单项属性，指定菜单项的ID ，显示的文本，和单机时触发的事件等等，具体可参见下面 <code class="code">items</code> 参数说明
+        </td>
+    </tr>
+
+    <tr>
+        <td>width</td>
+        <td>int</td>
+        <td>100</td>
+        <td>
+            菜单的整体宽度，单位 <code class="code">px</code>
+        </td>
+    </tr>
+
+    <tr>
+        <td>height</td>
+        <td>int</td>
+        <td>100</td>
+        <td>
+            菜单的整体高度，单位 <code class="code">px</code> ,如需指定高度，请将<code class="code">auto_height</code> 设为<code class="code">false</code>
+        </td>
+    </tr>
+
+    <tr>
+        <td>auto_height</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>
+            是否自动设置高度，为<code class="code">true</code>时，设置 <code class="code">height</code> 值无效
+        </td>
+    </tr>
+
+    <tr>
+        <td>background_color</td>
+        <td>string</td>
+        <td>#fbf8ff</td>
+        <td>
+            背景颜色 默认米白色，如需指定颜色，<code class="code">background_color</code> 设为<code class="code">false</code>
+        </td>
+    </tr>
+
+    <tr>
+        <td>background_color</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>
+            自定义设置背景颜色，默认为 <code class="code">false</code>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+<blockquote class="blockquote">
+    <p>菜单 options 对象原型</p>
+</blockquote>
+<pre name="code" class="js"><xmp>
+    /*
+     *  菜单Options 原型 默认值
+     */
+    MenuOptions:{
+        // 宽度 单位 px
+        width:100,
+        // 高度 单位 px
+        height: 100,
+        // 是否自动设置高度，为true时，设置 height 值无效
+        auto_height:true,
+        // 背景颜色
+        background_color:"#fbf8ff",
+        // 是否自定义背景颜色，为true时，backgroud_color 设置 无效
+        custom_background_color:false,
+        items:[
+            {id:"menu_item_edit",text:"edit this",click:function (obj,env) {
+                console.log(obj);
+            }},
+            {id:"menu_item_delete",text:"delete this",click:function (obj,env) {
+                console.log(obj);
+            }}
+        ]
+    },
+            </xmp></pre>
+<blockquote class="blockquote">
+    <p>item 参数说明</p>
+</blockquote>
+<table class="table table-bordered"  cellpadding="0" cellspacing="0" border="1"  >
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>类型</th>
+        <th>默认值</th>
+        <th width="500">描述</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>id</td>
+        <td>string</td>
+        <td>""</td>
+        <td>
+            菜单按钮的ID值，可通过这个ID值获取到按钮对象，
+        </td>
+    </tr>
+    <tr>
+        <td>text</td>
+        <td>string</td>
+        <td>""</td>
+        <td>
+            菜单按钮显示的文本信息
+        </td>
+    </tr>
+    <tr>
+        <td>click</td>
+        <td>function</td>
+        <td></td>
+        <td>
+            菜单按钮的单机处理事件，如需更多事件，可根据ID获取到对象后自行扩展
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+<pre name="code" class="js"><xmp>
+
+            </xmp></pre>
+<table class="table table-bordered"  cellpadding="0" cellspacing="0" border="1"  >
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>类型</th>
+        <th>默认值</th>
+        <th width="500">描述</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>background_color</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>
+            自定义设置背景颜色，默认为 <code class="code">false</code>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<script>
+    $(function () {
+        $("#cmDemo").xLily6X($.widget.ContextMenu,{
+            items:[
+                {id:"saveBtn",text:"save1",click:function (obj,env) {alert("save1Btn is click");}},
+                {id:"save2Btn",text:"save2",click:function (obj,env) {alert("save2Btn is click");}},
+                {id:"save3Btn",text:"save3",click:function (obj,env) {alert("save3Btn is click");}}
+
+            ],
+            auto_height:true,
+            background_color:"#fbf8ff",
+            save:function (obj) {
+                console.log("options.save");
+            }
+        });
+
+    });
+</script>
+
+

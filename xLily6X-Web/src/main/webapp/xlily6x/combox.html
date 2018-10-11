@@ -1,0 +1,262 @@
+<h1 id="下拉框"><a href="#" data-id="下拉框" class="anchor"><span>下拉框</span></a></h1>
+<blockquote id="widget_explain">
+    <p>控件说明</p>
+</blockquote>
+<p>该控件用于渲染 下拉框 ， 可实现异步加载下拉框数据，动态绑定。</p>
+
+<blockquote id="widget_instance">
+    <p>调用实例</p>
+</blockquote>
+
+<p>调用实例</p>
+
+
+
+
+<blockquote id="widget_demo">
+    <p>效果演示</p>
+</blockquote>
+
+<blockquote class="blockquote">
+    <p>静态 Data 数据加载 </p>
+</blockquote>
+<p>这个下拉框的数据来源于 js 中定义的data 对象</p>
+<div id="comboxDemo1"></div>
+
+<p>html 代码</p>
+<pre name="code" class="html"><xmp>
+    <div id="comboxDemoD1"></div>
+</xmp></pre>
+
+
+<p>js 代码</p>
+<pre name="code" class="js"><xmp>
+    // 静态 data 数据
+    var data = [{"name":"李云龙","code":"liyunlong"},{"name":"赵小飞","code":"zhaoxiaofei"},{"name":"关云长","code":"guanyunchang"}];
+
+    // 静态 data 数据加载下拉框参数
+    var options = {
+        value:"code",
+        text:"name",
+        remote:false,
+        data:data,
+        onchange:function (obj,args) {
+            console.log(obj);
+            console.log(args);
+            console.log("this comboxDemo1 value changed ");
+            // obj 下拉框对象
+            alert($(obj).find("option:selected").text()+" : "+$(obj).val());
+        }
+    };
+
+    $("#comboxDemoD1").xLily6X($.widget.Combox,options)
+
+</xmp></pre>
+
+
+<blockquote class="blockquote">
+    <p>远程 json 数据加载 </p>
+</blockquote>
+<p>这个下拉框的数据来源于远程url请求返回结果</p>
+<div id="comboxDemo2"></div>
+
+
+<p>html 代码</p>
+<pre name="code" class="html"><xmp>
+    <div id="comboxDemoD2"></div>
+</xmp></pre>
+
+
+<p>resources/json/combox_data.json 文件内容</p>
+<pre name="code" class="js"><xmp>
+    // 动态 json 数据
+    {"data":[{"name":"张三","code":"zhangsan"},{"name":"李四","code":"lisi"},{"name":"王五","code":"wangwu"}]};
+
+</xmp></pre>
+
+<p>js 代码</p>
+<pre name="code" class="js"><xmp>
+    // 动态 json 数据
+    //var json = {"data":[{"name":"张三","code":"zhangsan"},{"name":"李四","code":"lisi"},{"name":"王五","code":"wangwu"}]};
+
+    // 动态 json 数据加载下拉框参数
+    var options2 = {
+        url:"resources/json/combox_data.json",
+        value:"code",
+        text:"name",
+        onchange:function (obj,args) {
+            console.log(obj);
+            console.log(args);
+            console.log("this comboxDemo2 value changed ");
+            // obj 下拉框对象
+            alert($(obj).find("option:selected").text()+" : "+$(obj).val());
+        }
+    };
+
+    $("#comboxDemo2").xLily6X($.widget.Combox,options2)
+
+</xmp></pre>
+
+
+<blockquote id="widget_parameter">
+    <p>options 参数说明</p>
+</blockquote>
+
+<table class="table table-bordered"  cellpadding="0" cellspacing="0" border="1"  >
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>类型</th>
+        <th>默认值</th>
+        <th width="500">描述</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>url</td>
+        <td>string</td>
+        <td></td>
+        <td>
+            远程请求数据加载地址
+        </td>
+    </tr>
+    <tr>
+        <td>data</td>
+        <td>array</td>
+        <td></td>
+        <td>
+            下拉框数据源（若非远程请求url加载数据，此属性不可为空）
+        </td>
+    </tr>
+    <tr>
+        <td>parameters</td>
+        <td>object</td>
+        <td></td>
+        <td>
+            远程请求参数<br/>
+            eg:<br/>
+            {name:"张三丰",status:1}
+            在请求url地址时，会携带这两个参数
+        </td>
+    </tr>
+    <tr>
+        <td>value</td>
+        <td>string</td>
+        <td></td>
+        <td>
+            必填项，下拉框选项的值（属性名）<br/>
+            eg:<br/>
+            {"name":"张三","code":"zhangsan"}
+            将 "code":"zhangsan" 设置为选项的value值
+            value:"code"
+        </td>
+    </tr>
+    <tr>
+        <td>text</td>
+        <td>string</td>
+        <td></td>
+        <td>
+            必填项，下拉框选项显示的文本（属性名）<br/>
+            eg:<br/>
+            {"name":"张三","code":"zhangsan"}
+            将 "name":"张三" 设置为选项的text文本
+            text:"name"
+        </td>
+    </tr>
+    <tr>
+        <td>remote</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>
+            是否为远程请求获取数据
+        </td>
+    </tr>
+    <tr>
+        <td>dataType</td>
+        <td>string</td>
+        <td>json</td>
+        <td>
+            远程请求返回的数据类型，目前只支持json格式
+        </td>
+    </tr>
+    <tr>
+        <td>method</td>
+        <td>string</td>
+        <td></td>
+        <td>
+            远程请求方式，支持 post和 get方式
+        </td>
+    </tr>
+    <tr>
+        <td>async</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>
+            是否采用异步加载数据，默认为异步加载，false为同步加载
+        </td>
+    </tr>
+    <tr>
+        <td>width</td>
+        <td>string</td>
+        <td>150px</td>
+        <td>
+            下拉框宽度，默认为150px
+        </td>
+    </tr>
+    <tr>
+        <td>onchange</td>
+        <td>function</td>
+        <td></td>
+        <td>
+            当下拉框值变动时，触发的事件。
+            参数 （obj,args）<br/>
+            obj：下拉框对象<br/>
+            args：事件触发参数数组
+        </td>
+    </tr>
+    </tbody>
+</table>
+<script>
+
+
+    // 静态 data 数据
+    var data = [{"name":"李云龙","code":"liyunlong"},{"name":"赵小飞","code":"zhaoxiaofei"},{"name":"关云长","code":"guanyunchang"}];
+
+    // 静态 data 数据加载下拉框参数
+    var options = {
+        value:"code",
+        text:"name",
+        remote:false,
+        data:data,
+        onchange:function (obj,args) {
+            console.log(obj);
+            console.log(args);
+            console.log("this comboxDemo1 value changed ");
+            // obj 下拉框对象
+            alert($(obj).find("option:selected").text()+" : "+$(obj).val());
+        }
+    };
+
+    $("#comboxDemo1").xLily6X($.widget.Combox,options)
+
+
+    // 动态 json 数据
+    var json = {"data":[{"name":"张三","code":"zhangsan"},{"name":"李四","code":"lisi"},{"name":"王五","code":"wangwu"}]};
+
+    // 动态 json 数据加载下拉框参数
+    var options2 = {
+        url:"/resources/json/combox_data.json",
+        value:"code",
+        method:"get",
+        text:"name",
+        onchange:function (obj,args) {
+            console.log(obj);
+            console.log(args);
+            console.log("this comboxDemo2 value changed ");
+            // obj 下拉框对象
+            alert($(obj).find("option:selected").text()+" : "+$(obj).val());
+        }
+    };
+
+    $("#comboxDemo2").xLily6X($.widget.Combox,options2)
+</script>

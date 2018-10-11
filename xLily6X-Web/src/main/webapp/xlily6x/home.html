@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="X-Lily6x中文官网，包含前台UI框架和Java后台应用架构。 登录本网站可查阅API，下载UI库，网站中有作者的联系方式，可以为浏览者与作者之间建立美丽的桥梁。 " />
+    <meta name="keywords" content="javascript,jquery,ui,前台,前端,html,html5,框架,lily,后台,分布式,统一接口,dubbo,集群,java,xlily6x入门,xiaowenlong,wenlong">
+    <meta name="author" content="Xlily6X中文网">
+    <meta name="robots" content="all">
+    <meta name="generator"content="html5"/>
+    <title>xlily6x</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/doc-main.css"/>
+    <style>
+        .footernew{
+            position: absolute;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+        }
+        .footernew a{
+            text-decoration: none;
+            -webkit-transition: all 0.15s ease;
+            transition: all 0.15s ease;
+        }
+    </style>
+
+</head>
+<body>
+<section id="top-section" class="cover show" style="background: linear-gradient(to left bottom, rgb(31, 28, 205) 0%, rgba(179, 179, 255, 0.42) 100%)">
+    <!--<canvas id="c" width="300" height="150"></canvas>-->
+    <div class="cover-main">
+        <!--<p><img width="300" height="300" src="../resources/image/baihe2.jpg"></p>-->
+        <h1 id="mybatis-plus-214">
+            <a href="#" data-id="mybatis-plus-214" class="anchor">
+                <span style="font-size: 103px;color: rgb(191, 30, 57);">X-Lily6X</span>
+            </a>
+        </h1>
+        <blockquote>
+            <p>中文</p>
+        </blockquote>
+        <ul>
+            <li>简单、定制、功能强大</li>
+        </ul>
+        <p>
+            <a href="/xlily6x/index.html">X-Lily6X UI</a>
+            <a href="#">X-Lily6X Server</a>
+            <a href="/xlily6x/index.html#/download">Download</a>
+        </p>
+    </div>
+    <div class="mask">
+
+    </div>
+
+</section>
+<section>
+    <article>
+        <div class="footernew">
+            <span>X-Lily6X</span><br>
+            <span>©2017-11-16 <a href="http://www.miitbeian.gov.cn" target="_blank">粤ICP备17144440号</a> V1.0.0 版权所有</span>
+        </div>
+    </article>
+</section>
+<script src="../resources/jquery-2.1.1.js" ></script>
+<script src="../resources/js/common.js" ></script>
+<script>
+    $(function () {
+        backgroundRuning("top-section");
+        setTimeout(function () {
+            setInterval(backgroundRuning("top-section"),20000);
+        },2000);
+        var height = document.documentElement.clientHeight;
+        var width = document.documentElement.clientWidth;
+        $("#top-section").css({"height":height,"width":width});
+        $(".footernew").css({"top":height*0.9})
+
+    })
+
+</script>
+</body>
+</html>

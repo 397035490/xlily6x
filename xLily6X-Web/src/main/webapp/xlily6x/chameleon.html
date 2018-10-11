@@ -1,0 +1,161 @@
+<h1 id="表格隔行变色"><a href="#" data-id="表格隔行变色" class="anchor"><span>表格隔行变色</span></a></h1>
+<blockquote id="widget_explain">
+    <p>控件说明</p>
+</blockquote>
+<p>该控件主要用于表格中，其作用是美化表格行，使用后，会把表格隔行渲染自己喜欢的颜色<p>
+<p>当鼠标移至 <code class="code">Target</code> 上时，鼠标所在的行将高亮显示出来</p>
+
+<blockquote id="widget_instance">
+    <p>调用实例</p>
+</blockquote>
+
+<p>调用实例</p>
+<p>html 代码</p>
+<pre name="code" class="html"><xmp>
+    <table id="cnTableDemo"  cellpadding="0" cellspacing="0" border="1"  >
+        <thead>
+        <tr>
+            <th>名称</th>
+            <th>类型</th>
+            <th>默认值</th>
+            <th width="500">描述</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>font_size</td>
+            <td>string</td>
+            <td>10px</td>
+            <td>
+                字体大小
+            </td>
+        </tr>
+        <tr>
+            <td>location</td>
+            <td>string</td>
+            <td>UpRight</td>
+            <td>
+                提示框出现的方位
+            </td>
+        </tr>
+        <tr>
+            <td>text</td>
+            <td>string</td>
+            <td></td>
+            <td>
+                提示框显示的文本内容
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+</xmp></pre>
+
+
+<p>js 代码</p>
+<pre name="code" class="js"><xmp>
+    var options = {
+        oddClass:"lily_odd",
+        evenClass:"lily_even",
+        hoverClass:"lily_hover"
+    }
+</xmp></pre>
+<pre name="code" class="js"><xmp>
+    // 可传入Options 参数，
+    $("#cnTable").xLily6X($.widget.options);
+
+</xmp></pre>
+<blockquote id="widget_demo">
+    <p>效果演示</p>
+</blockquote>
+<p>注意观察表格的每一行，是不是每一行颜色都变了？</p>
+<p>再试试将鼠标移至行上，看看会有什么效果 </p>
+<table id="cnTable" class="table table-bordered"  cellpadding="0" cellspacing="0" border="1"  >
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>类型</th>
+        <th>默认值</th>
+        <th width="500">描述</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>font_size</td>
+        <td>string</td>
+        <td>10px</td>
+        <td>
+            字体大小
+        </td>
+    </tr>
+    <tr>
+        <td>location</td>
+        <td>string</td>
+        <td>UpRight</td>
+        <td>
+            提示框出现的方位
+        </td>
+    </tr>
+    <tr>
+        <td>text</td>
+        <td>string</td>
+        <td></td>
+        <td>
+            提示框显示的文本内容
+        </td>
+    </tr>
+    <tr>
+        <td>text</td>
+        <td>string</td>
+        <td></td>
+        <td>
+            提示框显示的文本内容
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<blockquote id="widget_parameter" >
+    <p>options 参数说明</p>
+</blockquote>
+
+<table class="table table-bordered"  cellpadding="0" cellspacing="0" border="1"  >
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>类型</th>
+        <th>默认值</th>
+        <th width="500">描述</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>oddClass</td>
+        <td>string</td>
+        <td>lily_odd</td>
+        <td>
+            基数行的类样式，可写一个样式，传入
+        </td>
+    </tr>
+    <tr>
+        <td>evenClass</td>
+        <td>string</td>
+        <td>lily_even</td>
+        <td>
+            偶数行类样式
+        </td>
+    </tr>
+    <tr>
+        <td>hoverClass</td>
+        <td>string</td>
+        <td>lily_hover</td>
+        <td>
+            鼠标移至行时高亮显示类样式
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<script>
+    $("#cnTable").xLily6X($.widget.Chameleon);
+</script>

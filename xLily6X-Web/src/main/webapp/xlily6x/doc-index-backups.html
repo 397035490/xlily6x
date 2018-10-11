@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../resources/css/doc-main.css"/>
+    <link rel="stylesheet" type="text/css" href="../resources/js/jquery-xlily6x-ui-1.0.1.css"/>
+
+
+</head>
+<body>
+<section class="cover show" style="background: linear-gradient(to left bottom, hsl(131, 100%, 85%) 0%,hsl(211, 100%, 85%) 100%)">
+    <div class="cover-main">
+        <p><img width="200" height="200" src="http://baomidou.oschina.io/mybatis-plus-doc/assets/logo.svg"></p>
+        <h1 id="mybatis-plus-214">
+            <a href="#" data-id="mybatis-plus-214" class="anchor">
+                <span>X-Lily6x UI <small>1.0.1</small></span>
+            </a>
+        </h1>
+        <blockquote>
+            <p>Born To Simplify Development</p>
+        </blockquote>
+        <ul>
+            <li>Simple、Powerful、Extensibility</li>
+        </ul>
+        <p>
+            <a href="#" target="_blank">Gitee</a>
+            <a href="#" target="_blank">GitHub</a>
+            <a href="#">Get Started</a>
+        </p>
+    </div>
+    <div class="mask"></div>
+</section>
+
+<main>
+    <!--<button class="sidebar-toggle"><div class="sidebar-toggle-button"><span></span><span></span><span></span></div></button>-->
+    <aside class="sidebar">
+        <div class="search">
+            <input type="search" placeholder="Type to search">
+            <div class="results-panel">
+
+            </div>
+        </div>
+        <h1>
+            <a class="app-name-link" data-nosearch="" href="#">X-Lily6x UI</a>
+        </h1>
+        <div class="sidebar-nav">
+            <ul>
+                <li><p>入门</p>
+                    <ul>
+                        <li><a href="#/quick-start">快速开始</a></li>
+                        <li><a href="#/install">安装集成</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p>核心功能</p>
+                    <ul>
+                        <li><a href="#/generic-crud">通用 CRUD</a></li>
+                        <li><a href="#/wrapper">条件构造器</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p>jQuery插件</p>
+                    <ul>
+                        <li><a href="#/page-plugin">右键菜单</a></li>
+                        <li><a href="#/execution-analysis-plugin">表格隔行变色</a></li>
+                        <li><a href="#/performance-analysis-plugin">高亮</a></li>
+                        <li><a href="#/optimistic-locker-plugin">帮助文本提示</a></li>
+                        <li>
+                            <a href="#/hot-loading">表格</a>
+                            <ul>
+                                <li><a href="#/generic-crud">初始化表格</a></li>
+                                <li><a href="#/wrapper">参数描述</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#/sql-injector">下拉框</a></li>
+                        <li><a href="#/auto-fill">代码展示高亮</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <p>其他</p>
+                    <ul>
+                        <li><a href="#/api">参数说明</a></li>
+                        <li><a href="#/question">常见问题</a></li>
+                        <li><a href="#/changelog">更新日志</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </aside>
+
+    <section class="content">
+        <article class="markdown-section" id="main">
+            <h1 id="简介">
+                <a href="#" data-id="简介" class="anchor"><span>简介</span></a>
+            </h1>
+            <p><a href="#" target="_blank">X-Lily6x</a>（简称 Lily）是一个 <a href="#" target="_blank">X-Lily6x</a> 的增强工具，在 Mybatis 的基础上只做增强不做改变，为简化开发、提高效率而生。</p>
+            <blockquote>
+                <p>我们的愿景是成为<code>X-Lily6x</code>最好的搭档，就像 <a href="#" target="_blank">Contra Game</a> 中的1P、2P，基友搭配，效率翻倍。</p>
+            </blockquote>
+            <p></p>
+            <h1 id="特性"><a href="#" data-id="特性" class="anchor"><span>特性</span></a></h1>
+            <ul>
+                <li><strong>无侵入</strong>：X-Lily6x 在 X-Lily6x 的基础上进行扩展，只做增强不做改变，引入 X-Lily6x 不会对您现有的 X-Lily6x 构架产生任何影响，而且 MP 支持所有 Mybatis 原生的特性</li>
+                <li><strong>依赖少</strong>：仅仅依赖 Mybatis 以及 Mybatis-Spring</li>
+                <li><strong>损耗小</strong>：启动即会自动注入基本CURD，性能基本无损耗，直接面向对象操作</li>
+                <li><strong>预防Sql注入</strong>：内置Sql注入剥离器，有效预防Sql注入攻击</li>
+                <li><strong>通用CRUD操作</strong>：内置通用 Mapper、通用 Service，仅仅通过少量配置即可实现单表大部分 CRUD 操作，更有强大的条件构造器，满足各类使用需求</li>
+                <li><strong>多种主键策略</strong>：支持多达4种主键策略（内含分布式唯一ID生成器），可自由配置，完美解决主键问题</li>
+                <li><strong>支持热加载</strong>：Mapper 对应的 XML 支持热加载，对于简单的 CRUD 操作，甚至可以无 XML 启动</li>
+                <li><strong>支持ActiveRecord</strong>：支持 ActiveRecord 形式调用，实体类只需继承 Model 类即可实现基本 CRUD 操作</li>
+                <li><strong>支持代码生成</strong>：采用代码或者 Maven 插件可快速生成 Mapper 、 Model 、 Service 、 Controller 层代码，支持模板引擎，更有超多自定义配置等您来使用（P.S. 比 Mybatis 官方的 Generator 更加强大！）</li>
+                <li><strong>支持自定义全局通用操作</strong>：支持全局通用方法注入（ Write once, use anywhere ）</li>
+                <li><strong>支持关键词自动转义</strong>：支持数据库关键词（order、key......）自动转义，还可自定义关键词</li>
+                <li><strong>内置分页插件</strong>：基于Mybatis物理分页，开发者无需关心具体操作，配置好插件之后，写分页等同于普通List查询</li>
+                <li><strong>内置性能分析插件</strong>：可输出Sql语句以及其执行时间，建议开发测试时启用该功能，能有效解决慢查询</li>
+                <li><strong>内置全局拦截插件</strong>：提供全表 delete 、 update 操作智能分析阻断，预防误操作</li>
+            </ul>
+
+            ————————————————————————————————————————————————————————————————
+            <br/>
+
+
+            <h1 id="快速入门"><a href="#" data-id="快速入门" class="anchor"><span>快速入门</span></a></h1>
+            <blockquote>
+                <p>添加 X-Lily6x 支持</p>
+            </blockquote>
+            <p>X-Lily6x 扩展于 <code class="code">jQuery</code> ， 所以在引入<code class="code">js</code> 时，需要先引用 <code class="code">jQuery</code> 版本在1.8以上都可以</p>
+            <p>引入 X-Lily6x <code class="code">js</code>文件</p>
+            <pre name="code" class="html"><xmp>
+    <script src="../resources/js/jquery-2.1.1.js" ></script>
+    <script src="../resources/js/jquery-xlily6x-ui-1.0.0.js" ></script>
+            </xmp></pre>
+
+
+
+            <p>引入<code class="code">css</code>样式</p>
+            <pre name="code" class="html"><xmp>
+    <link rel="stylesheet" type="text/css" href="../resources/css/jquery-xlily6x-ui-1.0.1.css"/>
+            </xmp></pre>
+
+            <blockquote>
+                <p>使用 X-Lily6x 控件</p>
+            </blockquote>
+            <p>X-Lily6x 的所有控件使用方式都一样，通过<code class="code">jQuery</code> 对象即可直接调用</p>
+            <pre name="code" class="js"><code>
+    $("#const").xLily6X("widgetName",options);
+            </code></pre>
+            <p></p>
+
+            <blockquote class="blockquote"><p>xLily6X("widgetName",options) 参数说明</p></blockquote>
+            <table class="table table-bordered"  cellpadding="0" cellspacing="0" border="1"  >
+                <thead>
+                <tr>
+                    <th>名称</th>
+                    <th>类型</th>
+                    <th>默认值</th>
+                    <th width="500">描述</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr>
+                    <td>widgetName</td>
+                    <td>string</td>
+                    <td>""</td>
+                    <td>
+                        在 X-Lily6x 的世界中，所有的控件都有一个名字,这个参数表示需要加载的控件名 控件名可通过 <code class="code">$.widget</code> 对象获取
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>options</td>
+                    <td>object</td>
+                    <td></td>
+                    <td>
+                        加载控件所需要的一些初始化配置信息,不同的控件有不同<code class="code">options</code>，具体控件<code class="code">options</code>请看对应控件参数说明
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <h1 id="右键菜单"><a href="#" data-id="右键菜单" class="anchor"><span>右键菜单</span></a></h1>
+            <blockquote>
+                <p>控件说明</p>
+            </blockquote>
+            <p>使用该控件后，当鼠标移至 <code class="code">Target</code> 上时，右键单击，将出现一个关联菜单，用户可根据自己需求设置菜单中的菜单
+                项，以及单击后的处理事件。</p>
+
+            <blockquote>
+                <p>调用实例</p>
+            </blockquote>
+
+            <p>调用实例</p>
+
+            <blockquote class="blockquote">
+                <p>Html 代码</p>
+            </blockquote>
+
+            <p>界面有<code class="code">div</code>元素，指定 <code class="code">id</code>值</p>
+            <pre name="code" class="html"><code>
+    <div id="const" style="width: 500px;height: 300px; background-color: #b9c7c2">
+        <label id="test1">test11111</label><br/>
+        <label id="test2">test222222</label><br/>
+        <label id="test3">test333333</label>
+    </div>
+            </code></pre>
+            <blockquote class="blockquote">
+                <p>通过jQuery对象即可调用菜单空间方法</p>
+            </blockquote>
+
+            <pre name="code" class="js">
+            <code>
+    // 初始化 右键环境菜单
+    $("#const").xLily6X($.widget.ContextMenu,options);
+            </code>
+            </pre>
+
+            <blockquote class="blockquote">
+                <p>options 对象示例</p>
+            </blockquote>
+
+            <pre name="code" class="js">
+            <code>
+    /**
+     * 环境菜单 选项
+     */
+    var options = {
+        // 菜单项
+        items:[
+            {id:"saveBtn",text:"save0",click:function (obj,env) {
+                    console.log(obj);
+                    console.log(env);
+                }
+            },
+            {id:"save2Btn",text:"save1",click:
+                // 单机事件
+                function (obj,env) {console.log(obj);console.log(env);}},
+            {id:"save3Btn",text:"save2",click:function (obj,env) {console.log(obj);console.log(env);}}
+        ],
+        auto_height:true,
+        //背景颜色
+        background_color:"#fbf8ff"
+    }
+            </code>
+            </pre>
+            <blockquote class="blockquote">
+                <p>options 参数说明</p>
+            </blockquote>
+            <p>每一个对象都会有一个默认原型，当缺省时，会根据原型中的默认值进行默认加载</p>
+            <table class="table table-bordered"  cellpadding="0" cellspacing="0" border="1"  >
+                <thead>
+                <tr>
+                    <th>名称</th>
+                    <th>类型</th>
+                    <th>默认值</th>
+                    <th width="500">描述</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                <tr>
+                    <td>items</td>
+                    <td>object</td>
+                    <td>""</td>
+                    <td>
+                        <code class="code">items</code> 参数用来指定菜单项属性，指定菜单项的ID ，显示的文本，和单机时触发的事件等等，具体可参见下面 <code class="code">items</code> 参数说明
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>width</td>
+                    <td>int</td>
+                    <td>100</td>
+                    <td>
+                        菜单的整体宽度，单位 <code class="code">px</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>height</td>
+                    <td>int</td>
+                    <td>100</td>
+                    <td>
+                        菜单的整体高度，单位 <code class="code">px</code> ,如需指定高度，请将<code class="code">auto_height</code> 设为<code class="code">false</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>auto_height</td>
+                    <td>boolean</td>
+                    <td>true</td>
+                    <td>
+                        是否自动设置高度，为<code class="code">true</code>时，设置 <code class="code">height</code> 值无效
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>background_color</td>
+                    <td>string</td>
+                    <td>#fbf8ff</td>
+                    <td>
+                        背景颜色 默认米白色，如需指定颜色，<code class="code">background_color</code> 设为<code class="code">false</code>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>background_color</td>
+                    <td>boolean</td>
+                    <td>false</td>
+                    <td>
+                        自定义设置背景颜色，默认为 <code class="code">false</code>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <blockquote class="blockquote">
+                <p>菜单 options 对象原型</p>
+            </blockquote>
+            <pre name="code" class="js"><code>
+    /*
+     *  菜单Options 原型 默认值
+     */
+    MenuOptions:{
+        // 宽度 单位 px
+        width:100,
+        // 高度 单位 px
+        height: 100,
+        // 是否自动设置高度，为true时，设置 height 值无效
+        auto_height:true,
+        // 背景颜色
+        background_color:"#fbf8ff",
+        // 是否自定义背景颜色，为true时，backgroud_color 设置 无效
+        custom_background_color:false,
+        items:[
+            {id:"menu_item_edit",text:"edit this",click:function (obj,env) {
+                console.log(obj);
+            }},
+            {id:"menu_item_delete",text:"delete this",click:function (obj,env) {
+                console.log(obj);
+            }}
+        ]
+    },
+            </code></pre>
+            <blockquote class="blockquote">
+                <p>item 参数说明</p>
+            </blockquote>
+            <table class="table table-bordered"  cellpadding="0" cellspacing="0" border="1"  >
+                <thead>
+                <tr>
+                    <th>名称</th>
+                    <th>类型</th>
+                    <th>默认值</th>
+                    <th width="500">描述</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>id</td>
+                    <td>string</td>
+                    <td>""</td>
+                    <td>
+                        菜单按钮的ID值，可通过这个ID值获取到按钮对象，
+                    </td>
+                </tr>
+                <tr>
+                    <td>text</td>
+                    <td>string</td>
+                    <td>""</td>
+                    <td>
+                        菜单按钮显示的文本信息
+                    </td>
+                </tr>
+                <tr>
+                    <td>click</td>
+                    <td>function</td>
+                    <td></td>
+                    <td>
+                        菜单按钮的单机处理事件，如需更多事件，可根据ID获取到对象后自行扩展
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+            <blockquote>
+                <p>样例展示</p>
+            </blockquote>
+            <pre name="code" class="js"><code>
+
+            </code></pre>
+            <table class="table table-bordered"  cellpadding="0" cellspacing="0" border="1"  >
+                <thead>
+                <tr>
+                    <th>名称</th>
+                    <th>类型</th>
+                    <th>默认值</th>
+                    <th width="500">描述</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>background_color</td>
+                    <td>boolean</td>
+                    <td>false</td>
+                    <td>
+                        自定义设置背景颜色，默认为 <code class="code">false</code>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+</main>
+
+<script src="../resources/jquery-2.1.1.js" ></script>
+<script src="../resources/js/jquery-xlily6x-ui-1.0.1.js" ></script>
+
+<script>
+    $(function () {
+        $.HtmlCodeOrnament();
+
+    })
+</script>
+</body>
+</html>

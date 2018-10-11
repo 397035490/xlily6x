@@ -1,0 +1,83 @@
+package ${package.Controller};
+
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import org.springframework.stereotype.Controller;
+import com.xlily6x.provider.${cfg.providerClass};
+import com.baomidou.mybatisplus.plugins.pagination.Pagination;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
+import com.xlily6x.domain.${entity};
+
+#if(${superControllerClassPackage})
+import ${superControllerClassPackage};
+#end
+
+/**
+ * <p>
+ * ${table.comment} 前端控制器
+ * </p>
+ *
+ * @author xiaowenlong
+ * @since ${date}
+ * @site http://www.xlily6x.com
+ * @email xiaowenlong2015@icloud.com
+ */
+@Controller
+@Api(value = "${entity}管理", description = "${entity}管理")
+@RequestMapping("#if(${package.ModuleName})/${package.ModuleName}#end/${table.entityPath}")
+#if(${superControllerClass})
+public class ${table.controllerName} extends ${superControllerClass}<${cfg.providerClass}> {
+#else
+public class ${table.controllerName} {
+#end
+
+    public String getService() {
+        return "${entity}Service";
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/queryList",method = RequestMethod.POST)
+    @ApiOperation(value = "查询${table.comment}")
+    public String query(@RequestBody ${entity} param){
+        return super.query(param);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/queryListPage",method = RequestMethod.POST)
+    @ApiOperation(value = "分页查询${table.comment}")
+    public String queryLilyPage(Pagination pagination,@RequestBody ${entity} param){
+        return super.queryLilyPage(pagination,param);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/insert",method = RequestMethod.POST)
+    @ApiOperation(value = "新增${table.comment}")
+    public String insert(@RequestBody ${entity} param){
+        return super.insert(param);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/updateById",method = RequestMethod.POST)
+    @ApiOperation(value = "根据ID修改 ${table.comment}")
+    public String updateById(@RequestBody ${entity} param){
+        return super.updateById(param);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/getOne",method = RequestMethod.POST)
+    @ApiOperation(value = "根据主键获取单条 ${entity} 数据")
+    public String getOne(@RequestBody String id){
+        return super.queryOne(id);
+    }
+
+    @ResponseBody
+    @RequestMapping(value = "/selectCount",method = RequestMethod.POST)
+    @ApiOperation(value = "查询总记录数 ${table.comment}")
+    public String selectCount(@RequestBody ${entity} param){
+        return super.selectCount(param);
+    }
+	
+}

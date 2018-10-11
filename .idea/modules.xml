@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/xLily6X.iml" filepath="$PROJECT_DIR$/xLily6X.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xLily6X-Api/xLily6X-Api.iml" filepath="$PROJECT_DIR$/xLily6X-Api/xLily6X-Api.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xLily6X-Common/xLily6X-Common.iml" filepath="$PROJECT_DIR$/xLily6X-Common/xLily6X-Common.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xLily6X-Facade/xLily6X-Facade.iml" filepath="$PROJECT_DIR$/xLily6X-Facade/xLily6X-Facade.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xLily6X-Service/xLily6X-Service.iml" filepath="$PROJECT_DIR$/xLily6X-Service/xLily6X-Service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/xLily6X-Web/xLily6X-Web.iml" filepath="$PROJECT_DIR$/xLily6X-Web/xLily6X-Web.iml" />
+    </modules>
+  </component>
+</project>

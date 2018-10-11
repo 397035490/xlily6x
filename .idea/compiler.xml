@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="xLily6X-Api" />
+        <module name="xLily6X-Common" />
+        <module name="xLily6X-Facade" />
+        <module name="xLily6X-Service" />
+        <module name="xLily6X-Web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="xLily6X" target="1.5" />
+      <module name="xLily6X-Api" target="1.7" />
+      <module name="xLily6X-Common" target="1.7" />
+      <module name="xLily6X-Facade" target="1.7" />
+      <module name="xLily6X-Service" target="1.7" />
+      <module name="xLily6X-Web" target="1.7" />
+      <module name="xLily6XCommon" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,99 @@
+<h1 id="代码展示高亮"><a href="#" data-id="代码展示高亮" class="anchor"><span>代码展示高亮</span></a></h1>
+<blockquote id="widget_explain">
+    <p>控件说明</p>
+</blockquote>
+<p>该控件用于需要在html页面中展示源代码时所用，使用后，代码中的关键字和部分语法代码会加上不同的颜色显示</p>
+<p>本文中展示给大家看到的所有代码，皆是该控件的作用</p>
+
+<blockquote id="widget_instance">
+    <p>调用实例</p>
+</blockquote>
+
+<p>调用实例</p>
+
+
+<blockquote class="blockquote">
+    <p>html 代码</p>
+</blockquote>
+<p>需要展示的代码必须放入此标签中</p>
+<p>PRE 标签属性介绍：</p>
+<p>name : 标签名称，xlily6x 通过这个属性决定是否需要对标签内的代码进行渲染处理</p>
+<p>class : 语言种类，xlily6x 通过这个属性决定用哪种语言的规则来渲染代码，内置 java html js 语言规则，如无法满足要求可自定义语言规则</p>
+<pre name="code" class="html"><xmp>
+    <pre name="code" class="html">&lt;xmp&gt;
+        ...code
+    &lt;/xmp&gt;</pre>
+</xmp></pre>
+
+
+<blockquote class="blockquote">
+    <p>js 代码</p>
+</blockquote>
+<p>在窗体加载完毕后，执行下面方法即可</p>
+<pre name="code" class="js"><xmp>
+    //窗体加载事件
+    //。。。
+    $.Xlily6X();
+    //。。。
+
+</xmp></pre>
+
+<blockquote id="widget_parameter">
+    <p>自定义语言渲染规则</p>
+</blockquote>
+<p>如下代码所示， $.Xlily6X() 方法， 支持传入一个自定义语言对象</p>
+
+<pre name="code" class="js"><xmp>
+    var Language = {
+        sql:[
+            {type:"labelL",color:"#3340ff",items:"h1|h2|h3|h4|h5|script|select"},
+            {type:"propertyL",color:"#e312ff",items:"lang|charset|rel|type|href|src|value|id"}
+        ],
+        json:[
+            {type:"keywordL",color:"#a22222",items:"var|try|while|throw|function|return"},
+            {type:"classL",color:"#1324cc",items:"this|XLily6XTable"},
+            {type:"methodL",color:"#f46410",items:"find|getOptions|tableGetSelectedRows|tableGetRows"},
+            {type:"propertyL",color:"#890b9a",items:"TableLoad|multiple|console|widget"}
+        ]
+    }
+
+</xmp></pre>
+
+
+<p>Language : 语言对象集合</p>
+<p>sql、json ： 语言对象</p>
+<p>语言对象有三个属性，type、color、items </p>
+<p>type : 描述规则类型</p>
+<p>color: 该规则将采用什么颜色作为渲染高亮</p>
+<p>items: 需要渲染的关键字项集合，各个关键字间用 | 符号隔开</p>
+
+<pre name="code" class="js"><xmp>
+    //窗体加载事件
+    //。。。
+    //调用时， 将自定义的Language对象传给 xlily6x
+    $.Xlily6X(Language);
+    //。。。
+
+</xmp></pre>
+
+<blockquote class="blockquote">
+    <p>注意事项</p>
+</blockquote>
+<p>Language 对象是一个集合，集合里面的元素都是数组，每一个数组是一门语言，数组中每一个对象，是一个规则， 一个规则对应一种渲染颜色</p>
+<script>
+    var Language = {
+        php:[
+            {type:"label",color:"#3340ff",items:"pre|link|&gt;|&lt;|h1|h2|h3|h4|h5|script|select"},
+            {type:"property",color:"#e312ff",items:"lang|charset|rel|type|href|src|value|id"}
+        ],
+        js:[
+            {type:"keyword",color:"#a22222",items:"var|try|while|throw|function|return"},
+            {type:"class",color:"#1324cc",items:"this|XLily6XTable"},
+            {type:"method",color:"#f46410",items:"find|getOptions|tableGetSelectedRows|tableGetRows"},
+            {type:"property",color:"#890b9a",items:"TableLoad|multiple|console|widget"}
+        ]
+    }
+
+</script>
+
+

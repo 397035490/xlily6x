@@ -1,0 +1,518 @@
+<h1 id="表格"><a href="#" data-id="表格" class="anchor"><span>表格</span></a></h1>
+<blockquote id="widget_explain">
+    <p>控件说明</p>
+</blockquote>
+<p>使用该控件后，可将目标渲染成一张表格，表格支持异步加载数据渲染。提供分页辅助插件，表头搜索</p>
+<p>异步数据加载完后，提供onLoad事件</p>
+
+<blockquote id="widget_instance">
+    <p>调用实例</p>
+</blockquote>
+
+<p>调用实例</p>
+
+
+<blockquote id="widget_demo">
+    <p>效果演示</p>
+</blockquote>
+
+
+<blockquote class="blockquote">
+    <p>基本表格</p>
+</blockquote>
+
+
+
+<p>html 代码</p>
+<pre name="code" class="html"><xmp>
+    <div id="lilyTable"></div>
+
+</xmp></pre>
+
+<p>js 代码</p>
+<pre name="code" class="js"><xmp>
+    var options={
+        columns:[
+            {name:"name",title:"姓名",width:"150px"},
+            {name:"age",title:"年龄",width:"100px"},
+            {name:"sex",title:"性别",width:"50px"},
+            {name:"idCard",title:"身份证号码",width:"250px"}
+        ],
+        url:"resources/json/table_data.json"
+    }
+    $(function () {
+        $("#lilyTable").xLily6X($.widget.Table,options);
+    })
+</xmp></pre>
+
+<div id="tableDemo" ></div>
+
+<blockquote class="blockquote">
+    <p>复杂表格</p>
+</blockquote>
+<p>1. 分页插件、表头搜索、列格式化</p>
+
+<p>html 代码</p>
+<pre name="code" class="html"><xmp>
+    <div id="lilyTableP"></div>
+
+</xmp></pre>
+
+<p>js 代码</p>
+<pre name="code" class="js"><xmp>
+    var optionsP={
+        columns : [
+            {name:"fileName",title:"File Name",width:"90px",isFormat:true,format:function (obj) {
+                var d = obj.directory;
+                console.log(obj.fileType);
+                if(d){
+                    var color = "#847edc";
+                    return '&lt;td style="color: '+color+'"&gt;'+obj.fileName+'&lt;/td&gt;';
+                }else{
+                    var color = fileNameColor(obj.fileType);
+                    return '&lt;td style="color: '+color+'"&gt;'+obj.fileName+'&lt;/td&gt;';
+                }
+
+            }},
+            {name:"fileSize",title:"File Size",width:"80px",search:true},
+            {name:"filePath",title:"File Path",width:"230px",align:"left",search:true},
+            {name:"directory",title:"Directory",width:"80px"}
+        ],
+        url:"/FilesServlet",
+        width:"800px",
+        //冻结列， 列序号 从0 开始 0 第一列
+        freeze:0,
+        //多选
+        multiple:true,
+        //使用分页插件，必须添加下面两个属性
+        paging:true,
+        //分页对象
+        pagination:{
+            currPage:1,
+            pageSize:5,
+            pageSizeList:[5,10,15]
+        },
+        parameters:{path:"/",action:"showfiless"}
+    }
+    $(function () {
+        $("#lilyTableP").xLily6X($.widget.Table,optionsP);
+    })
+</xmp></pre>
+
+
+<p>向右拉动滚动条，被冻结的列会一直保持可见而不被隐藏。</p>
+
+<p>列头搜索，列名将作为表单中的 name 值。在搜索框中输入内容时，提示信息会同步显示输入内容。 当输入框失去焦点时，会重新发送请求加载数据，Demo中不做演示</p>
+
+<div id="tableDemoP"></div>
+
+
+<blockquote id="widget_parameter" class="blockquote">
+    <p>options 参数说明</p>
+</blockquote>
+<p>加载表格时 传入的对象。 </p>
+<p>最简单的表格只需要传入两个属性，见简单表格示例</p>
+<table class="table table-bordered"  cellpadding="0" cellspacing="0" border="1"  >
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>类型</th>
+        <th>默认值</th>
+        <th width="500">描述</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>url</td>
+        <td>string</td>
+        <td></td>
+        <td>
+            远程请求加载数据地址
+        </td>
+    </tr>
+    <tr>
+        <td>dataType</td>
+        <td>string</td>
+        <td>json</td>
+        <td>
+            返回数据类型
+        </td>
+    </tr>
+    <tr>
+        <td>data</td>
+        <td>json</td>
+        <td></td>
+        <td>
+            表格数据
+        </td>
+    </tr>
+    <tr>
+        <td>columns</td>
+        <td>object</td>
+        <td></td>
+        <td>
+            表格列对象
+        </td>
+    </tr>
+    <tr>
+        <td>parameters</td>
+        <td>json</td>
+        <td></td>
+        <td>
+            数据加载请求参数
+        </td>
+    </tr>
+
+    <tr>
+        <td>remote</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>
+            是否远程加载
+        </td>
+    </tr>
+    <tr>
+        <td>method</td>
+        <td>string</td>
+        <td>post</td>
+        <td>
+            请求方式
+        </td>
+    </tr>
+    <tr>
+        <td>async</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>
+            是否异步加载
+        </td>
+    </tr>
+    <tr>
+        <td>width</td>
+        <td>int</td>
+        <td>100%</td>
+        <td>
+            表格宽度
+        </td>
+    </tr>
+    <tr>
+        <td>paging</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>
+            是否启用分页插件
+        </td>
+    </tr>
+    <tr>
+        <td>pagination</td>
+        <td>object</td>
+        <td></td>
+        <td>
+            分页对象
+        </td>
+    </tr>
+    <tr>
+        <td>search</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>
+            是否启用表头搜索
+        </td>
+    </tr>
+    <tr>
+        <td>freeze</td>
+        <td>int</td>
+        <td>-1</td>
+        <td>
+            列冻结 ， 0 是第一列。 -1 表示不启用冻结
+        </td>
+    </tr>
+    <tr>
+        <td>selectedColor</td>
+        <td>string</td>
+        <td>rgb(149, 178, 222)</td>
+        <td>
+            选中行颜色
+        </td>
+    </tr>
+    <tr>
+        <td>multiple</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>
+            是否多选
+        </td>
+    </tr>
+    <tr>
+        <td>onLoad</td>
+        <td>function</td>
+        <td></td>
+        <td>
+            表格数据加载完毕执行事件
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+<blockquote class="blockquote">
+    <p>columns 对象说明</p>
+</blockquote>
+<table class="table table-bordered"  cellpadding="0" cellspacing="0" border="1"  >
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>类型</th>
+        <th>默认值</th>
+        <th width="500">描述</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>title</td>
+        <td>string</td>
+        <td></td>
+        <td>
+            标题字段名（对应请求返回数据中的属性名，用作显示表头名称）
+        </td>
+    </tr>
+    <tr>
+        <td>name</td>
+        <td>string</td>
+        <td></td>
+        <td>
+            列数据字段名（对应请求返回数据中的属性名，用作显示表行数据）
+        </td>
+    </tr>
+    <tr>
+        <td>width</td>
+        <td>string</td>
+        <td>100%</td>
+        <td>
+            列宽度
+        </td>
+    </tr>
+    <tr>
+        <td>isFormat</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>
+            是否格式化列
+        </td>
+    </tr>
+    <tr>
+        <td>hide</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>
+            是否隐藏列
+        </td>
+    </tr>
+    <tr>
+        <td>search</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>
+            是否为该列添加列搜索
+        </td>
+    </tr>
+    <tr>
+        <td>align</td>
+        <td>string</td>
+        <td>center</td>
+        <td>
+            列对齐方式
+        </td>
+    </tr>
+    <tr>
+        <td>format</td>
+        <td>function</td>
+        <td></td>
+        <td>
+            格式化列实现（返回 td 对象即可）
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+<blockquote class="blockquote">
+    <p>pagination 对象说明</p>
+</blockquote>
+
+<table class="table table-bordered"  cellpadding="0" cellspacing="0" border="1"  >
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>类型</th>
+        <th>默认值</th>
+        <th width="500">描述</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>pageSize</td>
+        <td>int</td>
+        <td>20</td>
+        <td>
+            每页显示大小
+        </td>
+    </tr>
+    <tr>
+        <td>pageSizeList</td>
+        <td>array</td>
+        <td>[10,20,30]</td>
+        <td>
+            每页显示大小集合（下拉框中值）
+        </td>
+    </tr>
+    <tr>
+        <td>currPage</td>
+        <td>int</td>
+        <td>1</td>
+        <td>
+            当前页
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+
+<blockquote class="blockquote">
+    <p>方法说明</p>
+</blockquote>
+
+<table class="table table-bordered"  cellpadding="0" cellspacing="0" border="1"  >
+    <thead>
+    <tr>
+        <th>名称</th>
+        <th>参数</th>
+        <th>返回值</th>
+        <th width="500">描述</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>TableReload</td>
+        <td>parameters：json格式对象 重新请求时会携带这些属性</td>
+        <td></td>
+        <td>
+            重新加载 table
+            $("#targetId").xLily6X($.widget.TableReload,parameters);
+        </td>
+    </tr>
+    <tr>
+        <td>tableGetRows</td>
+        <td></td>
+        <td>[tr,tr,tr...]</td>
+        <td>
+            获取表格的所有行 Dom 对象
+            $("#targetId").xLily6X($.widget.TableGetRows);
+        </td>
+    </tr>
+    <tr>
+        <td>tableGetSelectedRows</td>
+        <td></td>
+        <td>单选 ： tr 对象</br>多选： [tr,tr,tr...]</td>
+        <td>
+            获取表格选中的行， 当选中一行时返回单个对象，选中多行时，返回数组对象
+        </td>
+    </tr>
+    <tr>
+        <td>tableGetSelectedDatas</td>
+        <td></td>
+        <td>单选 ： object</br>多选： [object,object,object]</td>
+        <td>
+            获取表格选中的行数据， 当选中一行时返回单个对象，选中多行时，返回数组对象
+        </td>
+    </tr>
+
+    </tbody>
+</table>
+
+<script>
+    var options={
+        columns:[
+            {name:"name",title:"姓名",width:"150px"},
+            {name:"age",title:"年龄",width:"100px"},
+            {name:"sex",title:"性别",width:"50px"},
+            {name:"idCard",title:"身份证号码",width:"250px"}
+        ],
+        method:"get",
+        url:"/resources/json/table_data.json"
+    }
+
+    var optionsP={
+        columns:[
+            {name:"fileName",title:"File Name",width:"90px",isFormat:true,format:function (obj) {
+                var d = obj.directory;
+                console.log(obj.fileType);
+                if(d){
+                    var color = "#847edc";
+                    return '<td style="color: '+color+'">'+obj.fileName+'</td>';
+                }else{
+                    var color = fileNameColor(obj.fileType);
+                    return '<td style="color: '+color+'">'+obj.fileName+'</td>';
+                }
+
+            }},
+            {name:"fileSize",title:"File Size",width:"150px",search:true},
+            {name:"filePath",title:"File Path",width:"230px",align:"left",search:true},
+            {name:"filePath",title:"File Path1",width:"230px",align:"left"},
+            {name:"filePath",title:"File Path2",width:"230px",align:"left"},
+            {name:"filePath",title:"File Path3",width:"230px",align:"left"},
+            {name:"directory",title:"Directory4",width:"80px"}
+        ],
+        url:"http://www.xlily6x.com/FilesServlet",
+        width:"800px",
+        //冻结列， 列序号 从0 开始 0 第一列
+        freeze:0,
+        //多选
+        multiple:true,
+        //使用分页插件，必须添加下面两个属性
+        paging:true,
+        //分页对象
+        pagination:{
+            currPage:1,
+            pageSize:5,
+            pageSizeList:[5,10,15]
+        },
+        parameters:{path:"/",action:"showfiless"}
+    }
+    $(function () {
+        $("#tableDemo").xLily6X($.widget.Table,options);
+        $("#tableDemoP").xLily6X($.widget.Table,optionsP);
+    })
+
+
+
+    var fileNameColor = function (type) {
+        // var point = fileName.lastIndexOf(".");
+        // var type = fileName.substr(point+1);
+        var color = "#585655";
+        switch (type){
+            case "zip":
+                color = "#e33256";
+                break;
+            case "rar":
+                color = "#c04144";
+                break;
+            case "gz":
+                color = "#c04144";
+                break;
+            case "exe":
+                color = "#13e947";
+                break;
+            case "sh":
+                color = "#54ff6d";
+                break;
+            case "bat":
+                color = "#54ff6d";
+                break;
+            case "jar":
+                color = "#fcfeff";
+                break;
+
+        }
+        return color;
+    }
+</script>
