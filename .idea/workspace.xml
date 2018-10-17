@@ -6,7 +6,22 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b06c9f71-9bd5-4a53-98cc-a9a5b3911f51" name="Default" comment="" />
+    <list default="true" id="b06c9f71-9bd5-4a53-98cc-a9a5b3911f51" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/xLily6X_Api_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/xLily6X_Api_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_8_6.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_4_5.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_8_6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xLily6X-Api/xLily6X-Api.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xLily6X-Api/xLily6X-Api.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xLily6X-Common/xLily6X-Common.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xLily6X-Common/xLily6X-Common.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xLily6X-Facade/xLily6X-Facade.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xLily6X-Facade/xLily6X-Facade.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xLily6X-Service/xLily6X-Service.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xLily6X-Service/xLily6X-Service.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xLily6X-Web/src/main/webapp/xlily6x/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/xLily6X-Web/src/main/webapp/xlily6x/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xLily6X-Web/xLily6X-Web.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xLily6X-Web/xLily6X-Web.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/xLily6X.iml" beforeDir="false" afterPath="$PROJECT_DIR$/xLily6X.iml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/xLily6XCommon/target/" />
@@ -85,8 +100,12 @@
     <session id="1726577686">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.11" value="1" />
+          <entry key="project.open.time.14" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -101,36 +120,24 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="xml" value="1" />
+          <entry key="1" value="1" />
+          <entry key="gitattributes" value="1" />
+          <entry key="java" value="1" />
+          <entry key="log" value="1" />
+          <entry key="xml" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="XML" value="1" />
+          <entry key="JAVA" value="1" />
+          <entry key="PLAIN_TEXT" value="3" />
+          <entry key="XML" value="2" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2200">
-              <caret line="100" column="48" selection-start-line="100" selection-start-column="48" selection-end-line="100" selection-end-column="48" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/xLily6X-Web/src/main/webapp/demo/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xLily6X-Service/src/main/java/com/xlily6x/core/ServiceStart.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -140,11 +147,32 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xLily6X-Service/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="55" column="47" lean-forward="true" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
+            <state relative-caret-position="448">
+              <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="180" column="24" selection-start-line="180" selection-start-column="24" selection-end-line="180" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/xLily6X-Api/src/main/java/com/xlily6x/api/CodeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="162" column="28" lean-forward="true" selection-start-line="162" selection-start-column="28" selection-end-line="162" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -170,7 +198,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/xLily6X-Common/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
+            <state relative-caret-position="858">
               <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
             </state>
           </provider>
@@ -212,8 +240,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>1.</find>
-      <find>1.8</find>
       <find>slf4j.version</find>
       <find>log4j-core</find>
       <find>log4j.version</find>
@@ -242,7 +268,12 @@
       <find>mysql.version</find>
       <find>druid</find>
       <find>mybatis-plus init success</find>
+      <find>jackson-databind</find>
+      <find>jackson</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -280,7 +311,6 @@
         <option value="$PROJECT_DIR$/xLily6X-Common/src/main/resources/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/xLily6X-Service/src/main/resources/config/jdbc.properties" />
         <option value="$PROJECT_DIR$/xLily6X-Common/src/main/resources/spring/dataSource.xml" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/xLily6X-Api/src/main/java/com/xlily6x/api/CodeController.java" />
         <option value="$PROJECT_DIR$/xLily6X-Service/src/main/java/com/xlily6x/core/ServiceStart.java" />
         <option value="$PROJECT_DIR$/xLily6X-Service/src/main/resources/Spring-config.xml" />
@@ -298,6 +328,7 @@
         <option value="$PROJECT_DIR$/readme.txt" />
         <option value="$PROJECT_DIR$/xLily6X-Api/pom.xml" />
         <option value="$PROJECT_DIR$/xLily6X-Common/pom.xml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -333,11 +364,15 @@
           <item name="xLily6X" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="xLily6X-Api" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
       </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds">
     <option name="x" value="-9" />
     <option name="y" value="-9" />
     <option name="width" value="1938" />
@@ -362,12 +397,14 @@
       </profile-state>
     </entry>
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <hideEmptyPackages ProjectPane="false" />
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -384,24 +421,48 @@
             <path>
               <item name="xLily6X" type="b2602c69:ProjectViewProjectNode" />
               <item name="xLily6X" type="462c0819:PsiDirectoryNode" />
-              <item name="xLily6X-Common" type="462c0819:PsiDirectoryNode" />
+              <item name="xLily6X-Api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xLily6X" type="b2602c69:ProjectViewProjectNode" />
               <item name="xLily6X" type="462c0819:PsiDirectoryNode" />
-              <item name="xLily6X-Facade" type="462c0819:PsiDirectoryNode" />
+              <item name="xLily6X-Api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="xLily6X" type="b2602c69:ProjectViewProjectNode" />
               <item name="xLily6X" type="462c0819:PsiDirectoryNode" />
-              <item name="xLily6X-Service" type="462c0819:PsiDirectoryNode" />
+              <item name="xLily6X-Api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xLily6X" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xLily6X" type="462c0819:PsiDirectoryNode" />
+              <item name="xLily6X-Api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xlily6x" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="xLily6X" type="b2602c69:ProjectViewProjectNode" />
+              <item name="xLily6X" type="462c0819:PsiDirectoryNode" />
+              <item name="xLily6X-Api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="xlily6x" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -415,7 +476,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539229725576" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539342626918" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -852,7 +913,10 @@
       <workItem from="1538115634008" duration="4384000" />
       <workItem from="1539076154071" duration="1200000" />
       <workItem from="1539223701538" duration="4729000" />
-      <workItem from="1539229785405" duration="190000" />
+      <workItem from="1539229785405" duration="5199000" />
+      <workItem from="1539584784725" duration="79000" />
+      <workItem from="1539585310186" duration="596000" />
+      <workItem from="1539762163750" duration="424000" />
     </task>
     <servers />
   </component>
@@ -889,7 +953,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266356000" />
+    <option name="totallyTimeSpent" value="272464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1050" extended-state="0" />
@@ -900,15 +964,15 @@
       <window_info id="Image Layers" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info id="Nl-Palette" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.29872206" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.30830672" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info id="Structure" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Event Log" order="0" sideWeight="0.50482833" side_tool="true" weight="0.27292576" />
-      <window_info anchor="bottom" id="Version Control" order="1" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Version Control" order="1" visible="true" weight="0.32896176" />
       <window_info anchor="bottom" id="Terminal" order="2" weight="0.32919955" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" weight="0.32919955" />
-      <window_info active="true" anchor="bottom" id="Run" order="5" sideWeight="0.49517167" visible="true" weight="0.32532752" />
+      <window_info anchor="bottom" id="Run" order="5" sideWeight="0.49517167" weight="0.32568306" />
       <window_info anchor="bottom" id="Debug" order="6" weight="0.35400227" />
       <window_info anchor="bottom" id="Cvs" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Java Enterprise" order="8" weight="0.32919955" />
@@ -941,15 +1005,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/xLily6X-Service/src/main/java/com/xlily6x/core/ProviderImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xLily6X-Service/src/main/resources/mybatis/system/UserMapper.xml" />
-    <entry file="file://$PROJECT_DIR$/xLily6X-Service/src/main/resources/mybatis/mybatis-config.xml" />
     <entry file="file://$PROJECT_DIR$/xLily6X-Api/src/main/java/com/xlily6x/api/TestController.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus/2.0.7/mybatis-plus-2.0.7-sources.jar!/com/baomidou/mybatisplus/service/impl/ServiceImpl.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/baomidou/mybatis-plus/2.0.7/mybatis-plus-2.0.7-sources.jar!/com/baomidou/mybatisplus/service/IService.java" />
@@ -1073,13 +1128,6 @@
     <entry file="file://$PROJECT_DIR$/xLily6X-Web/src/main/webapp/resources/image/xlily6x-wx.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/xLily6X-Api/src/main/java/com/xlily6x/api/CodeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="127" column="58" lean-forward="true" selection-start-line="127" selection-start-column="58" selection-end-line="127" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xLily6X-Api/src/main/resources/Spring-config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
@@ -1132,13 +1180,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2200">
-          <caret line="100" column="48" selection-start-line="100" selection-start-column="48" selection-end-line="100" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xLily6X-Web/src/main/webapp/demo/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -1146,10 +1187,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/velocity.log" />
+    <entry file="file://$PROJECT_DIR$/velocity.log.1" />
+    <entry file="file://$PROJECT_DIR$/.gitattributes">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="66">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/xLily6X-Service/src/main/java/com/xlily6x/core/ServiceStart.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="11" column="63" selection-start-line="11" selection-start-column="63" selection-end-line="11" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xLily6X-Api/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xLily6X-Common/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -1170,31 +1241,27 @@
     <entry file="file://$PROJECT_DIR$/xLily6X-Common/src/main/resources/spring/dubbo.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/readme.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="11" column="5" selection-start-line="11" selection-start-column="5" selection-end-line="11" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xLily6X-Api/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/xLily6X-Common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/xLily6X-Service/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="55" column="47" lean-forward="true" selection-start-line="55" selection-start-column="47" selection-end-line="55" selection-end-column="47" />
+        <state relative-caret-position="448">
+          <caret line="65" column="20" selection-start-line="65" selection-start-column="20" selection-end-line="65" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="180" column="24" selection-start-line="180" selection-start-column="24" selection-end-line="180" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/xLily6X-Api/src/main/java/com/xlily6x/api/CodeController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="162" column="28" lean-forward="true" selection-start-line="162" selection-start-column="28" selection-end-line="162" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
